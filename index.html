@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JadwalKu - XI RPL 2</title>
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar" id="beranda">
+    <a href="index.html" class="logo">
+        <img src="assets/logo.jpg" alt="Logo JadwalKu">
+        <span>JadwalKu</span>
+    </a>
+
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#jadwal">Jadwal</a>
+        <a href="#data-siswa">Data Siswa</a>
+        <a href="form.html" class="nav-button">+ Tambah Jadwal</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- BERANDA -->
+    <section class="hero">
+        <div class="hero-text">
+            <span class="eyebrow">SCHOOL SCHEDULE SYSTEM</span>
+            <h1>Selamat Datang di<br><span>JadwalKu!</span></h1>
+            <p>
+                Semua jadwal pelajaran kelas XI RPL 2
+                tersusun lebih rapi dan mudah dilihat.
+            </p>
+            <a href="#jadwal" class="primary-button">Lihat Jadwal →</a>
+        </div>
+
+        <div class="welcome-card">
+            <img src="assets/logo.jpg" alt="Logo Sekolah">
+            <h2>XI RPL 2</h2>
+            <p>SMK SWASTA PRAMA ARTHA</p>
+            <span>TAHUN PELAJARAN 2026/2027</span>
+        </div>
+    </section>
+
+    <!-- DATA SISWA -->
+    <section class="section" id="data-siswa">
+        <div class="section-title">
+            <span class="eyebrow">STUDENT PROFILE</span>
+            <h2>Data Siswa</h2>
+            <p>Informasi siswa pengguna JadwalKu.</p>
+        </div>
+
+        <div class="student-card">
+            <div class="student-avatar">SO</div>
+
+            <div class="student-info">
+                <h3>Saskia Olivia</h3>
+                <p>XI RPL 2</p>
+                <span>SMK SWASTA PRAMA ARTHA</span>
+            </div>
+
+            <div class="student-status">
+                <span>● Siswa</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- JADWAL -->
+    <section class="section schedule-section" id="jadwal">
+        <div class="section-title schedule-heading">
+            <div>
+                <span class="eyebrow">CLASS TIMETABLE</span>
+                <h2>Jadwal Pelajaran</h2>
+                <p>Daftar mata pelajaran kelas XI RPL 2.</p>
+            </div>
+
+            <a href="form.html" class="primary-button">+ Tambah Jadwal</a>
+        </div>
+
+        <div class="schedule-toolbar">
+            <input type="text" id="searchInput"
+                placeholder="Cari mata pelajaran...">
+
+            <select id="dayFilter">
+                <option value="Semua">Semua Hari</option>
+                <option value="Senin">Senin</option>
+                <option value="Selasa">Selasa</option>
+                <option value="Rabu">Rabu</option>
+                <option value="Kamis">Kamis</option>
+                <option value="Jumat">Jumat</option>
+                <option value="Sabtu">Sabtu</option>
+            </select>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Hari</th>
+                        <th>Mata Pelajaran</th>
+                        <th>Guru</th>
+                        <th>Jam</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="scheduleList"></tbody>
+            </table>
+        </div>
+
+        <p id="emptyMessage" class="empty-message" hidden>
+            Belum ada jadwal yang ditemukan.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-brand">
+        <img src="assets/logo.jpg" alt="Logo JadwalKu">
+        <strong>JadwalKu</strong>
+    </div>
+    <p>SMK SWASTA PRAMA ARTHA · XI RPL 2</p>
+    <small>© 2026 JadwalKu</small>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+
